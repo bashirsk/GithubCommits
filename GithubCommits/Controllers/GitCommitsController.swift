@@ -26,6 +26,9 @@ class GitCommitsController: UIViewController {
         tableView.dataSource = self
         self.tableView.rowHeight = UITableView.automaticDimension
         tableView.estimatedRowHeight = 100
+        tableView.backgroundColor = UIColor(red: 41.0/255, green: 42.0/255, blue: 48.0/255, alpha: 1.0)
+        navigationController?.navigationBar.barTintColor = UIColor(red: 41.0/255, green: 42.0/255, blue: 48.0/255, alpha: 1.0)
+        navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.white]
     }
     
     private func registerNib() {

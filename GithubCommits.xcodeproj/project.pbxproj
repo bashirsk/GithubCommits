@@ -21,6 +21,7 @@
 		61D7312D21207A6000187AE7 /* Image.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61D7312C21207A6000187AE7 /* Image.swift */; };
 		61D7312F21207B9400187AE7 /* Root.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61D7312E21207B9400187AE7 /* Root.swift */; };
 		61D7313221207C6900187AE7 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61D7313121207C6900187AE7 /* NetworkManager.swift */; };
+		61D731342120B2B100187AE7 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61D731332120B2B100187AE7 /* Colors.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +41,7 @@
 		61D7312C21207A6000187AE7 /* Image.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Image.swift; sourceTree = "<group>"; };
 		61D7312E21207B9400187AE7 /* Root.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Root.swift; sourceTree = "<group>"; };
 		61D7313121207C6900187AE7 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		61D731332120B2B100187AE7 /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -127,6 +129,7 @@
 			isa = PBXGroup;
 			children = (
 				61D7311B212072B100187AE7 /* GitCommitsTableView.swift */,
+				61D731332120B2B100187AE7 /* Colors.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -220,6 +223,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				61D7311A2120708400187AE7 /* CustomTableViewCell.swift in Sources */,
+				61D731342120B2B100187AE7 /* Colors.swift in Sources */,
 				61D7312B212079E500187AE7 /* People.swift in Sources */,
 				61D7313221207C6900187AE7 /* NetworkManager.swift in Sources */,
 				61D73129212077DA00187AE7 /* Author.swift in Sources */,
