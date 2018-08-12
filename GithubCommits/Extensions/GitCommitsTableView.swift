@@ -10,13 +10,19 @@ import UIKit
 
 extension GitCommitsController: UITableViewDelegate, UITableViewDataSource {
     
+    // MARK:- TableView delegate methods
+    /**
+     - Set up all the necessary stuff required
+     - Things like populating the tableview cells, cell background color, custom row height etc. 
+     */
+    
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return root.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as! CustomTableViewCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: Identifiers.Cell.rawValue, for: indexPath) as! CustomTableViewCell
         let commits = root[indexPath.row]
         cell.root = commits
         return cell
@@ -31,7 +37,7 @@ extension GitCommitsController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
-        cell.backgroundColor = UIColor(red: 41.0/255, green: 42.0/255, blue: 48.0/255, alpha: 1.0)
+        cell.backgroundColor = .darkslategray
     }
 }
 

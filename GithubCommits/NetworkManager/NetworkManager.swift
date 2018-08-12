@@ -11,11 +11,21 @@ import UIKit
 
 class NetworkManager: APIClient {
     
+    /**
+     - Create singleton we can use anytime we are making request
+     */
+    
     static let shared = NetworkManager()
     
-    
+    /**
+     - Conform to the protocol with a completion handler we can use to pass data back to the
+     viewcontroller
+     - Check the url if its nil using guard rather than force unwrapping, there by the app won't crash
+     when users are using it
+     - Create a JSON object and decode our commit fetched from the internet inform of type data 
+     */
     func getGitCommits(completionHandler: @escaping NetworkManager.completionBlock) {
-        let urlString = "https://api.github.com/repos/apple/swift/commits"
+        let urlString = URLS.URL.rawValue
         guard let url = URL(string: urlString) else {
             print("Couldn't fetch JSON")
             return

@@ -10,10 +10,31 @@ import UIKit
 
 class CustomTableViewCell: UITableViewCell {
     
-    @IBOutlet weak var authorNameLabel: UILabel!
-    @IBOutlet weak var timeLabel: UILabel!
-    @IBOutlet weak var commitTitleLabel: UILabel!
+    // MARK:- Labels
+    /**
+     - Set our label textcolor to white when the views load up
+     */
+    
+    @IBOutlet weak var authorNameLabel: UILabel! {
+        didSet {
+            authorNameLabel.textColor = .white
+        }
+    }
+    @IBOutlet weak var timeLabel: UILabel! {
+        didSet {
+            timeLabel.textColor = .white
+        }
+    }
+    @IBOutlet weak var commitTitleLabel: UILabel! {
+        didSet {
+            commitTitleLabel.textColor = .white
+        }
+    }
     @IBOutlet weak var authorImageView: UIImageView!
+    
+    /**
+     - Populate label wit data fecthed from the Github API
+     */
     
     var root: Root! {
         didSet {
@@ -24,14 +45,25 @@ class CustomTableViewCell: UITableViewCell {
         }
     }
     
+    /**
+     - Format our date fetched from the Github API
+     - Convert date to a string to enable populate the time label view since it
+     outputs text which is a string
+     */
+    
     private func dateFormatter() {
         guard let myDate = root.commit.author.date else { return }
         let dateFormatter = DateFormatter()
-        dateFormatter.locale = Locale(identifier: "en_GB")
-        dateFormatter.dateFormat = "hh:mm:ss"
+        dateFormatter.locale = Locale(identifier: Identifiers.UKLocale.rawValue)
+        dateFormatter.dateFormat = DateFormat.format.rawValue
         let date = dateFormatter.string(from: myDate)
         timeLabel.text = date
     }
+    
+    /**
+     - Download author images from the Github API
+     - Update the label and run it on the main thread
+     */
     
     private func loadImage() {
         guard let url = URL(string: root.author.avatar ?? "") else { return }
