@@ -9,7 +9,7 @@
 import Foundation
 
 struct People: Codable {
-    let name: String
-    let date: Date
-    let email: String
+    let name: String?
+    let date: Date?
+    let email: String?
 }

@@ -22,21 +22,14 @@ class NetworkManager: APIClient {
         }
         let session = URLSession.shared
         let dataTask = session.dataTask(with: url) { (data, response, error) in
-            guard data != nil && error == nil else {
-                print(data ?? "")
-                return
-            }
+            guard let data = data else { return }
             do {
                 let decoder = JSONDecoder()
                 decoder.dateDecodingStrategy = .iso8601
-                let result = try decoder.decode([Root].self, from: data!)
-                result.forEach{
-                    print("Name: \($0.commit.author.name)")
-//                    print("Date: \($0.commit.author.date)")
-//                    print("Avatar: \($0.author.avatar)")
-//                    print("Commit Message: \($0.commit.message) \n")
+                let result = try decoder.decode([Root].self, from: data)
+                result.forEach({ (root) in
                     completionHandler(result)
-                }
+                })
             } catch let decodeError {
                 print("Failed to decode json:", decodeError)
             }

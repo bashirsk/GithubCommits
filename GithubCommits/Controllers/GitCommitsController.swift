@@ -12,7 +12,6 @@ class GitCommitsController: UIViewController {
     
     @IBOutlet weak var tableView: UITableView!
     
-    
     var root = [Root]()
 
     override func viewDidLoad() {
@@ -37,12 +36,9 @@ class GitCommitsController: UIViewController {
     private func networkManager() {
         NetworkManager.shared.getGitCommits { (root) in
             self.root = root
-            
             DispatchQueue.main.async {
                  self.tableView.reloadData()
-                
             }
-           
         }
     }
     

@@ -20,33 +20,28 @@ class CustomTableViewCell: UITableViewCell {
             authorNameLabel.text = root.commit.author.name
             commitTitleLabel.text = root.commit.message
             dateFormatter()
+            loadImage()
         }
     }
     
     private func dateFormatter() {
-        let date = Date()
+        guard let myDate = root.commit.author.date else { return }
         let dateFormatter = DateFormatter()
+        dateFormatter.locale = Locale(identifier: "en_GB")
         dateFormatter.dateFormat = "hh:mm:ss"
-        let strDate = dateFormatter.string(from: date)
-        timeLabel.text = strDate
+        let date = dateFormatter.string(from: myDate)
+        timeLabel.text = date
     }
     
     private func loadImage() {
         guard let url = URL(string: root.author.avatar ?? "") else { return }
-        
+        let session = URLSession.shared
+        let dataTask = session.dataTask(with: url) { (data, _, _) in
+            guard let data = data else { return }
+            DispatchQueue.main.async {
+                self.authorImageView.image = UIImage(data: data)
+            }
+        }
+        dataTask.resume()
     }
-    
-    
-
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        // Initialization code
-    }
-
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
-    }
-
 }

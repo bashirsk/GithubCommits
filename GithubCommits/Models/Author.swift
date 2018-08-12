@@ -10,5 +10,5 @@ import Foundation
 
 struct Author: Codable {
     let author: People
-    let message: String
+    let message: String?
 }
