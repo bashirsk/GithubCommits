@@ -12,7 +12,7 @@ class GitCommitsController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+       NetworkManager.shared.getGitCommits()
     }
     
     private func setUpTableView() {

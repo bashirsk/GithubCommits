@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct Root {
-    let commit: AuthorInfo
-    let author: AuthorImage
+struct Root: Codable {
+    let commit: Author
+    let author: Image
 }

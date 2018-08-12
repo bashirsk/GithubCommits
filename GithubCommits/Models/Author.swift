@@ -9,6 +9,6 @@
 import Foundation
 
 struct Author: Codable {
-    let author: AuthorInfo
+    let author: People
     let message: String
 }

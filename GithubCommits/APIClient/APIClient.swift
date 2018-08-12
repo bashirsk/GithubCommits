@@ -9,9 +9,9 @@
 import Foundation
 
 protocol APIClient {
-    typealias completionBlock = (([Root])->())
+    //typealias completionBlock = (([Root])->())
     
-    func getGitCommits(completionHandler: @escaping completionBlock)
+    func getGitCommits()
 }
 
 

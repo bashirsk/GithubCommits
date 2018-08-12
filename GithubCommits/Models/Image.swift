@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct AuthorImage: Codable {
+struct Image: Codable {
     let avatar: String
     
     private enum CodingKeys: String, CodingKey {
