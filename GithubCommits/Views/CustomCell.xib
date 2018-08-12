@@ -30,14 +30,14 @@
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Time" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rrj-7f-1mz">
-                        <rect key="frame" x="352" y="11" width="146" height="20"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rrj-7f-1mz">
+                        <rect key="frame" x="230" y="11" width="260" height="0.0"/>
                         <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="14"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Commit Message" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6bx-Q1-xb2">
-                        <rect key="frame" x="95" y="41" width="403" height="153"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Commit Message" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6bx-Q1-xb2">
+                        <rect key="frame" x="95" y="41" width="395" height="153"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
@@ -46,17 +46,23 @@
                 <constraints>
                     <constraint firstItem="K1K-3n-uv3" firstAttribute="leading" secondItem="LTC-BC-0Zk" secondAttribute="leading" constant="116" id="8cG-xR-3An"/>
                     <constraint firstItem="6bx-Q1-xb2" firstAttribute="leading" secondItem="udC-ln-192" secondAttribute="trailing" constant="8" id="Oiw-tc-aOG"/>
-                    <constraint firstAttribute="trailing" secondItem="6bx-Q1-xb2" secondAttribute="trailing" id="PDZ-cc-RWB"/>
+                    <constraint firstAttribute="trailing" secondItem="6bx-Q1-xb2" secondAttribute="trailing" constant="8" id="PDZ-cc-RWB"/>
                     <constraint firstItem="udC-ln-192" firstAttribute="centerY" secondItem="LTC-BC-0Zk" secondAttribute="centerY" id="Zgy-24-AFe"/>
                     <constraint firstAttribute="bottom" secondItem="6bx-Q1-xb2" secondAttribute="bottom" constant="10.5" id="bex-Pn-2Zn"/>
                     <constraint firstItem="Rrj-7f-1mz" firstAttribute="top" secondItem="LTC-BC-0Zk" secondAttribute="top" constant="11" id="e9S-Fp-qFU"/>
                     <constraint firstItem="udC-ln-192" firstAttribute="leading" secondItem="LTC-BC-0Zk" secondAttribute="leading" constant="16" id="jCe-Nn-a2T"/>
                     <constraint firstItem="6bx-Q1-xb2" firstAttribute="top" secondItem="K1K-3n-uv3" secondAttribute="bottom" constant="10" id="jYF-xK-nnN"/>
-                    <constraint firstItem="Rrj-7f-1mz" firstAttribute="leading" secondItem="K1K-3n-uv3" secondAttribute="trailing" constant="152" id="xLF-ec-Xqy"/>
+                    <constraint firstItem="Rrj-7f-1mz" firstAttribute="leading" secondItem="K1K-3n-uv3" secondAttribute="trailing" constant="30" id="xLF-ec-Xqy"/>
                     <constraint firstItem="K1K-3n-uv3" firstAttribute="top" secondItem="LTC-BC-0Zk" secondAttribute="top" constant="11" id="yMU-jT-CJD"/>
-                    <constraint firstAttribute="trailing" secondItem="Rrj-7f-1mz" secondAttribute="trailing" id="yky-ao-U8X"/>
+                    <constraint firstAttribute="trailing" secondItem="Rrj-7f-1mz" secondAttribute="trailing" constant="8" id="yky-ao-U8X"/>
                 </constraints>
             </tableViewCellContentView>
+            <connections>
+                <outlet property="authorImageView" destination="udC-ln-192" id="mpU-DL-jQ1"/>
+                <outlet property="authorNameLabel" destination="K1K-3n-uv3" id="q02-zA-q8f"/>
+                <outlet property="commitTitleLabel" destination="6bx-Q1-xb2" id="1cu-xI-EgE"/>
+                <outlet property="timeLabel" destination="Rrj-7f-1mz" id="Rta-n0-wLX"/>
+            </connections>
             <point key="canvasLocation" x="-71" y="-66.5"/>
         </tableViewCell>
     </objects>

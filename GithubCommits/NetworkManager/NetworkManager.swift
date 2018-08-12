@@ -14,7 +14,7 @@ class NetworkManager: APIClient {
     static let shared = NetworkManager()
     
     
-    func getGitCommits() {
+    func getGitCommits(completionHandler: @escaping NetworkManager.completionBlock) {
         let urlString = "https://api.github.com/repos/apple/swift/commits"
         guard let url = URL(string: urlString) else {
             print("Couldn't fetch JSON")
@@ -32,9 +32,10 @@ class NetworkManager: APIClient {
                 let result = try decoder.decode([Root].self, from: data!)
                 result.forEach{
                     print("Name: \($0.commit.author.name)")
-                    print("Date: \($0.commit.author.date)")
-                    print("Avatar: \($0.author.avatar)")
-                    print("Commit Message: \($0.commit.message) \n")
+//                    print("Date: \($0.commit.author.date)")
+//                    print("Avatar: \($0.author.avatar)")
+//                    print("Commit Message: \($0.commit.message) \n")
+                    completionHandler(result)
                 }
             } catch let decodeError {
                 print("Failed to decode json:", decodeError)

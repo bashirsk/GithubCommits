@@ -9,6 +9,34 @@
 import UIKit
 
 class CustomTableViewCell: UITableViewCell {
+    
+    @IBOutlet weak var authorNameLabel: UILabel!
+    @IBOutlet weak var timeLabel: UILabel!
+    @IBOutlet weak var commitTitleLabel: UILabel!
+    @IBOutlet weak var authorImageView: UIImageView!
+    
+    var root: Root! {
+        didSet {
+            authorNameLabel.text = root.commit.author.name
+            commitTitleLabel.text = root.commit.message
+            dateFormatter()
+        }
+    }
+    
+    private func dateFormatter() {
+        let date = Date()
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "hh:mm:ss"
+        let strDate = dateFormatter.string(from: date)
+        timeLabel.text = strDate
+    }
+    
+    private func loadImage() {
+        guard let url = URL(string: root.author.avatar ?? "") else { return }
+        
+    }
+    
+    
 
     override func awakeFromNib() {
         super.awakeFromNib()

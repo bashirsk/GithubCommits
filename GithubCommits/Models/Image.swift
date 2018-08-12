@@ -9,7 +9,7 @@
 import Foundation
 
 struct Image: Codable {
-    let avatar: String
+    let avatar: String?
     
     private enum CodingKeys: String, CodingKey {
         case avatar = "avatar_url"
