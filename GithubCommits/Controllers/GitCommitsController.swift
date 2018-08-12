@@ -25,7 +25,7 @@ class GitCommitsController: UIViewController {
         tableView.delegate = self
         tableView.dataSource = self
         self.tableView.rowHeight = UITableView.automaticDimension
-        tableView.estimatedRowHeight = 200
+        tableView.estimatedRowHeight = 100
     }
     
     private func registerNib() {
