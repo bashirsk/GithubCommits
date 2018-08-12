@@ -15,7 +15,7 @@ class NetworkManager: APIClient {
     
     
     func getGitCommits(completionHandler: @escaping NetworkManager.completionBlock) {
-        let urlString = "https://api.github.com/repos/apple/swift/commits"
+        let urlString = URLS.URL.rawValue
         guard let url = URL(string: urlString) else {
             print("Couldn't fetch JSON")
             return

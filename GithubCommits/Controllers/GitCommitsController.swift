@@ -16,9 +16,17 @@ class GitCommitsController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        initialize()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
         networkManager()
+    }
+    
+    private func initialize() {
         setUpTableView()
         registerNib()
+        navigation()
     }
     
     private func setUpTableView() {
@@ -26,14 +34,17 @@ class GitCommitsController: UIViewController {
         tableView.dataSource = self
         self.tableView.rowHeight = UITableView.automaticDimension
         tableView.estimatedRowHeight = 100
-        tableView.backgroundColor = UIColor(red: 41.0/255, green: 42.0/255, blue: 48.0/255, alpha: 1.0)
-        navigationController?.navigationBar.barTintColor = UIColor(red: 41.0/255, green: 42.0/255, blue: 48.0/255, alpha: 1.0)
+        tableView.backgroundColor = .darkslategray
+    }
+    
+    private func navigation() {
+        navigationController?.navigationBar.barTintColor = .darkslategray
         navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.white]
     }
     
     private func registerNib() {
-        let nib = UINib(nibName: "CustomCell", bundle: nil)
-        tableView.register(nib, forCellReuseIdentifier: "Cell")
+        let nib = UINib(nibName: Nibs.CustomCell.rawValue, bundle: nil)
+        tableView.register(nib, forCellReuseIdentifier: Identifiers.Cell.rawValue)
     }
     
     private func networkManager() {
