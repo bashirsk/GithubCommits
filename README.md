@@ -4,8 +4,8 @@ Github commits is a one screen app that enables users fetch and see all commits 
 
 # Screenshots
 
-![webp net-resizeimage](https://user-images.githubusercontent.com/16119772/37594645-b5408b4c-2b6d-11e8-9817-e9cb97d558cc.png)
-![webp net-resizeimage 1](https://user-images.githubusercontent.com/16119772/37594802-30dbd5ae-2b6e-11e8-9fdf-32275acde203.png)
+![webp net-resizeimage](https://user-images.githubusercontent.com/16119772/44005862-13ad2e3e-9e72-11e8-8a52-922da527fccc.png)
+![webp net-resizeimage 1](https://user-images.githubusercontent.com/16119772/44005875-46f914c4-9e72-11e8-855a-93026bffdf4d.png)
 
 ## Getting Started
 
