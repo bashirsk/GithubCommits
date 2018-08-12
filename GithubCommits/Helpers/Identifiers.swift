@@ -8,6 +8,9 @@
 
 import Foundation
 
+/**
+ - Enums to help clean our code. 
+ */
 enum Identifiers: String {
     case Cell
     case UKLocale = "en_GB"

@@ -10,6 +10,12 @@ import UIKit
 
 extension GitCommitsController: UITableViewDelegate, UITableViewDataSource {
     
+    // MARK:- TableView delegate methods
+    /**
+     - Set up all the necessary stuff required
+     - Things like populating the tableview cells, cell background color, custom row height etc. 
+     */
+    
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return root.count
