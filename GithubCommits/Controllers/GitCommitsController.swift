@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  GitCommitsController.swift
 //  GithubCommits
 //
 //  Created by Bashir Sentongo on 12/08/2018.
@@ -8,13 +8,17 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class GitCommitsController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
-    }
 
+    }
+    
+    private func setUpTableView() {
+        
+    }
+    
 
 }
 

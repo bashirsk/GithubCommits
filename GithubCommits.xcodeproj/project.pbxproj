@@ -8,20 +8,26 @@
 
 /* Begin PBXBuildFile section */
 		61D731002120666900187AE7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61D730FF2120666900187AE7 /* AppDelegate.swift */; };
-		61D731022120666900187AE7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61D731012120666900187AE7 /* ViewController.swift */; };
 		61D731052120666900187AE7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 61D731032120666900187AE7 /* Main.storyboard */; };
 		61D731072120666A00187AE7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 61D731062120666A00187AE7 /* Assets.xcassets */; };
 		61D7310A2120666A00187AE7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 61D731082120666A00187AE7 /* LaunchScreen.storyboard */; };
+		61D7311621206CCC00187AE7 /* CustomCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 61D7311521206CCC00187AE7 /* CustomCell.xib */; };
+		61D731182120703200187AE7 /* GitCommitsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61D731172120703200187AE7 /* GitCommitsController.swift */; };
+		61D7311A2120708400187AE7 /* CustomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61D731192120708400187AE7 /* CustomTableViewCell.swift */; };
+		61D7311C212072B100187AE7 /* GitCommitsTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61D7311B212072B100187AE7 /* GitCommitsTableView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		61D730FC2120666900187AE7 /* GithubCommits.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GithubCommits.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		61D730FF2120666900187AE7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		61D731012120666900187AE7 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		61D731042120666900187AE7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		61D731062120666A00187AE7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		61D731092120666A00187AE7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		61D7310B2120666A00187AE7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		61D7311521206CCC00187AE7 /* CustomCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomCell.xib; sourceTree = "<group>"; };
+		61D731172120703200187AE7 /* GitCommitsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitCommitsController.swift; sourceTree = "<group>"; };
+		61D731192120708400187AE7 /* CustomTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTableViewCell.swift; sourceTree = "<group>"; };
+		61D7311B212072B100187AE7 /* GitCommitsTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitCommitsTableView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,14 +60,57 @@
 		61D730FE2120666900187AE7 /* GithubCommits */ = {
 			isa = PBXGroup;
 			children = (
-				61D730FF2120666900187AE7 /* AppDelegate.swift */,
-				61D731012120666900187AE7 /* ViewController.swift */,
-				61D731032120666900187AE7 /* Main.storyboard */,
-				61D731062120666A00187AE7 /* Assets.xcassets */,
-				61D731082120666A00187AE7 /* LaunchScreen.storyboard */,
+				61D7311221206A9B00187AE7 /* Models */,
+				61D7311321206AAA00187AE7 /* Views */,
+				61D7311421206AB200187AE7 /* Controllers */,
+				61D7311D212072D000187AE7 /* Extensions */,
 				61D7310B2120666A00187AE7 /* Info.plist */,
+				61D7311121206A7800187AE7 /* Supporting Files */,
 			);
 			path = GithubCommits;
+			sourceTree = "<group>";
+		};
+		61D7311121206A7800187AE7 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				61D730FF2120666900187AE7 /* AppDelegate.swift */,
+				61D731062120666A00187AE7 /* Assets.xcassets */,
+				61D731082120666A00187AE7 /* LaunchScreen.storyboard */,
+			);
+			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		61D7311221206A9B00187AE7 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		61D7311321206AAA00187AE7 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				61D731192120708400187AE7 /* CustomTableViewCell.swift */,
+				61D731032120666900187AE7 /* Main.storyboard */,
+				61D7311521206CCC00187AE7 /* CustomCell.xib */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		61D7311421206AB200187AE7 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				61D731172120703200187AE7 /* GitCommitsController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		61D7311D212072D000187AE7 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				61D7311B212072B100187AE7 /* GitCommitsTableView.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -124,6 +173,7 @@
 			files = (
 				61D7310A2120666A00187AE7 /* LaunchScreen.storyboard in Resources */,
 				61D731072120666A00187AE7 /* Assets.xcassets in Resources */,
+				61D7311621206CCC00187AE7 /* CustomCell.xib in Resources */,
 				61D731052120666900187AE7 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -135,8 +185,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				61D731022120666900187AE7 /* ViewController.swift in Sources */,
+				61D7311A2120708400187AE7 /* CustomTableViewCell.swift in Sources */,
 				61D731002120666900187AE7 /* AppDelegate.swift in Sources */,
+				61D731182120703200187AE7 /* GitCommitsController.swift in Sources */,
+				61D7311C212072B100187AE7 /* GitCommitsTableView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
