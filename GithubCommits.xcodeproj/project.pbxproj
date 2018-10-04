@@ -20,7 +20,7 @@
 		61D7312B212079E500187AE7 /* People.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61D7312A212079E500187AE7 /* People.swift */; };
 		61D7312D21207A6000187AE7 /* Image.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61D7312C21207A6000187AE7 /* Image.swift */; };
 		61D7312F21207B9400187AE7 /* Root.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61D7312E21207B9400187AE7 /* Root.swift */; };
-		61D7313221207C6900187AE7 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61D7313121207C6900187AE7 /* NetworkManager.swift */; };
+		61D7313221207C6900187AE7 /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61D7313121207C6900187AE7 /* APIManager.swift */; };
 		61D731342120B2B100187AE7 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61D731332120B2B100187AE7 /* Colors.swift */; };
 		61D731392120B89700187AE7 /* Identifiers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61D731382120B89700187AE7 /* Identifiers.swift */; };
 		61D7313B2120B8FD00187AE7 /* Nibs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61D7313A2120B8FD00187AE7 /* Nibs.swift */; };
@@ -44,7 +44,7 @@
 		61D7312A212079E500187AE7 /* People.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = People.swift; sourceTree = "<group>"; };
 		61D7312C21207A6000187AE7 /* Image.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Image.swift; sourceTree = "<group>"; };
 		61D7312E21207B9400187AE7 /* Root.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Root.swift; sourceTree = "<group>"; };
-		61D7313121207C6900187AE7 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		61D7313121207C6900187AE7 /* APIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIManager.swift; sourceTree = "<group>"; };
 		61D731332120B2B100187AE7 /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 		61D731382120B89700187AE7 /* Identifiers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Identifiers.swift; sourceTree = "<group>"; };
 		61D7313A2120B8FD00187AE7 /* Nibs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Nibs.swift; sourceTree = "<group>"; };
@@ -83,7 +83,7 @@
 			isa = PBXGroup;
 			children = (
 				61D731372120B87F00187AE7 /* Helpers */,
-				61D7313021207C2900187AE7 /* NetworkManager */,
+				61D7313021207C2900187AE7 /* API */,
 				61D7311F2120764400187AE7 /* APIClient */,
 				61D7311221206A9B00187AE7 /* Models */,
 				61D7311321206AAA00187AE7 /* Views */,
@@ -151,12 +151,12 @@
 			path = APIClient;
 			sourceTree = "<group>";
 		};
-		61D7313021207C2900187AE7 /* NetworkManager */ = {
+		61D7313021207C2900187AE7 /* API */ = {
 			isa = PBXGroup;
 			children = (
-				61D7313121207C6900187AE7 /* NetworkManager.swift */,
+				61D7313121207C6900187AE7 /* APIManager.swift */,
 			);
-			path = NetworkManager;
+			path = API;
 			sourceTree = "<group>";
 		};
 		61D731372120B87F00187AE7 /* Helpers */ = {
@@ -246,7 +246,7 @@
 				61D7313D2120B98900187AE7 /* URLS.swift in Sources */,
 				61D731342120B2B100187AE7 /* Colors.swift in Sources */,
 				61D7312B212079E500187AE7 /* People.swift in Sources */,
-				61D7313221207C6900187AE7 /* NetworkManager.swift in Sources */,
+				61D7313221207C6900187AE7 /* APIManager.swift in Sources */,
 				61D73129212077DA00187AE7 /* Author.swift in Sources */,
 				61D7313F2120BAC400187AE7 /* Dates.swift in Sources */,
 				61D7312D21207A6000187AE7 /* Image.swift in Sources */,
