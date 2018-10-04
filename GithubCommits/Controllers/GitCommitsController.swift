@@ -48,8 +48,6 @@ class GitCommitsController: UIViewController {
     
     private func initialize() {
         setUpTableView()
-        registerNib()
-        navigation()
     }
     
     // MARK:- TableView set up methods
@@ -58,21 +56,12 @@ class GitCommitsController: UIViewController {
      */
     
     private func setUpTableView() {
-        tableView.delegate = self
-        tableView.dataSource = self
-        self.tableView.rowHeight = UITableView.automaticDimension
+        tableView.rowHeight = UITableView.automaticDimension
         tableView.estimatedRowHeight = 100
-        tableView.backgroundColor = .darkslategray
-    }
-    
-    private func navigation() {
-        navigationController?.navigationBar.barTintColor = .darkslategray
-        navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.white]
-    }
-    
-    private func registerNib() {
+        
         let nib = UINib(nibName: Nibs.CustomCell.rawValue, bundle: nil)
         tableView.register(nib, forCellReuseIdentifier: Identifiers.Cell.rawValue)
     }
+
 }
 

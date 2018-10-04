@@ -15,21 +15,9 @@ class CustomTableViewCell: UITableViewCell {
      - Set our label textcolor to white when the views load up
      */
     
-    @IBOutlet weak var authorNameLabel: UILabel! {
-        didSet {
-            authorNameLabel.textColor = .white
-        }
-    }
-    @IBOutlet weak var timeLabel: UILabel! {
-        didSet {
-            timeLabel.textColor = .white
-        }
-    }
-    @IBOutlet weak var commitTitleLabel: UILabel! {
-        didSet {
-            commitTitleLabel.textColor = .white
-        }
-    }
+    @IBOutlet weak var authorNameLabel: UILabel! 
+    @IBOutlet weak var timeLabel: UILabel!
+    @IBOutlet weak var commitTitleLabel: UILabel!
     @IBOutlet weak var authorImageView: UIImageView!
     
     /**

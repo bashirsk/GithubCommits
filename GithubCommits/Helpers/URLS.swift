@@ -10,4 +10,5 @@ import Foundation
 
 enum URLS: String {
     case URL = "https://api.github.com/repos/apple/swift/commits"
+    case BashCommits = "https://api.github.com/repos/bashirsk/LastfmApp/commits"
 }
