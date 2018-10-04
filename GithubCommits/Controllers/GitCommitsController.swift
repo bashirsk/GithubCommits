@@ -24,6 +24,7 @@ class GitCommitsController: UIViewController {
      */
     
     override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
         networkManager()
     }
     
@@ -34,7 +35,8 @@ class GitCommitsController: UIViewController {
      */
     
     private func networkManager() {
-        NetworkManager.shared.getGitCommits { (root) in
+        let apiManager = APIManager()
+        apiManager.getGitCommits { (root) in
             self.root = root
             DispatchQueue.main.async {
                 self.tableView.reloadData()

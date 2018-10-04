@@ -9,13 +9,7 @@
 import Foundation
 import UIKit
 
-class NetworkManager: APIClient {
-    
-    /**
-     - Create singleton we can use anytime we are making request
-     */
-    
-    static let shared = NetworkManager()
+class APIManager {
     
     /**
      - Conform to the protocol with a completion handler we can use to pass data back to the
@@ -24,7 +18,7 @@ class NetworkManager: APIClient {
      when users are using it
      - Create a JSON object and decode our commit fetched from the internet inform of type data 
      */
-    func getGitCommits(completionHandler: @escaping NetworkManager.completionBlock) {
+    func getGitCommits(completionHandler: @escaping ([Root])->()) {
         let urlString = URLS.URL.rawValue
         guard let url = URL(string: urlString) else {
             print("Couldn't fetch JSON")

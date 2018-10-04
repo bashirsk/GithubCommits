@@ -15,7 +15,6 @@
 		61D731182120703200187AE7 /* GitCommitsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61D731172120703200187AE7 /* GitCommitsController.swift */; };
 		61D7311A2120708400187AE7 /* CustomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61D731192120708400187AE7 /* CustomTableViewCell.swift */; };
 		61D7311C212072B100187AE7 /* GitCommitsTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61D7311B212072B100187AE7 /* GitCommitsTableView.swift */; };
-		61D731212120765D00187AE7 /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61D731202120765D00187AE7 /* APIClient.swift */; };
 		61D73129212077DA00187AE7 /* Author.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61D73128212077DA00187AE7 /* Author.swift */; };
 		61D7312B212079E500187AE7 /* People.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61D7312A212079E500187AE7 /* People.swift */; };
 		61D7312D21207A6000187AE7 /* Image.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61D7312C21207A6000187AE7 /* Image.swift */; };
@@ -39,7 +38,6 @@
 		61D731172120703200187AE7 /* GitCommitsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitCommitsController.swift; sourceTree = "<group>"; };
 		61D731192120708400187AE7 /* CustomTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTableViewCell.swift; sourceTree = "<group>"; };
 		61D7311B212072B100187AE7 /* GitCommitsTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitCommitsTableView.swift; sourceTree = "<group>"; };
-		61D731202120765D00187AE7 /* APIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIClient.swift; sourceTree = "<group>"; };
 		61D73128212077DA00187AE7 /* Author.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Author.swift; sourceTree = "<group>"; };
 		61D7312A212079E500187AE7 /* People.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = People.swift; sourceTree = "<group>"; };
 		61D7312C21207A6000187AE7 /* Image.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Image.swift; sourceTree = "<group>"; };
@@ -84,7 +82,6 @@
 			children = (
 				61D731372120B87F00187AE7 /* Helpers */,
 				61D7313021207C2900187AE7 /* API */,
-				61D7311F2120764400187AE7 /* APIClient */,
 				61D7311221206A9B00187AE7 /* Models */,
 				61D7311321206AAA00187AE7 /* Views */,
 				61D7311421206AB200187AE7 /* Controllers */,
@@ -141,14 +138,6 @@
 				61D731332120B2B100187AE7 /* Colors.swift */,
 			);
 			path = Extensions;
-			sourceTree = "<group>";
-		};
-		61D7311F2120764400187AE7 /* APIClient */ = {
-			isa = PBXGroup;
-			children = (
-				61D731202120765D00187AE7 /* APIClient.swift */,
-			);
-			path = APIClient;
 			sourceTree = "<group>";
 		};
 		61D7313021207C2900187AE7 /* API */ = {
@@ -254,7 +243,6 @@
 				61D7313B2120B8FD00187AE7 /* Nibs.swift in Sources */,
 				61D7312F21207B9400187AE7 /* Root.swift in Sources */,
 				61D731182120703200187AE7 /* GitCommitsController.swift in Sources */,
-				61D731212120765D00187AE7 /* APIClient.swift in Sources */,
 				61D731392120B89700187AE7 /* Identifiers.swift in Sources */,
 				61D7311C212072B100187AE7 /* GitCommitsTableView.swift in Sources */,
 			);
